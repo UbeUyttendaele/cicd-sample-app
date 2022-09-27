@@ -18,7 +18,7 @@ After I initialized the folders as a git repository with
 First I startup the the VM using **vagrant up**.
 Then I used **vagrant ssh** to establish an ssh connection and went to the /vagrant/cicd-sample-app directory. I added execute permission using **chmod +x sample-app.sh** and executed the script using **./sample-app.sh**. After running the script I could access the webpage that was running in the docker container on my host device (http://192.168.56.20:5050/).
 
-After testing, I stopped the testing docker using **docker container stop samplerunning** and removed it using **docker comtaimer prune** which removes all stopped docker containers.
+After testing, I stopped the testing docker using **docker container stop samplerunning** and removed it using **docker container rm samplerunning** or **docker container prune**.
 
 ![testpage](./reportScreenshots/testpage.png)
 
@@ -26,14 +26,22 @@ After testing, I stopped the testing docker using **docker container stop sample
 First I installed the docker container using the code provided to us.
 
 ```
-Login username:
-Admin
-Provied password:
+Login Details
+username:
+admin
+password:
 7266b9df94a941cba102821b57b02917
 ```
 
 ## 1.4 Configure Jekins
 In this step I followed the instructions provided to initialize the jenkins evironment.
+![jenkinsInstall](./reportScreenshots/jenkinsInstall.png)
+
+## 1.5 Use Jenkins to build your application
+I got the build to run succesfully. After building it for the first time and atempting it again wil result in an error that says that a docker container with that name is already exists. To solve this you need to stop and remove the old container. Afterwards I found out that in the script it doesn't check if a certain directory already exists. So when it runs it gives an error stating that the directory already exists. I've solved this by editing the script and adding the -p parameter to the mkdir command.
+
+![buildSuccess](./reportScreenshots/buildSuccess.png)
+
 ## Resources
 
 List all sources of useful information that you encountered while completing this assignment: books, manuals, HOWTO's, blog posts, etc.
