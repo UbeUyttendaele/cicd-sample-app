@@ -1,5 +1,6 @@
 # Lab Report: Continuous Integration/Delivery With Jenkins
-## Problemen
+## Problems:
+### Installing vagrant
 With installing all the required software. I found out that the Fedora repositories don't include the latest version of vagrant. This was something I had to noticed since when I did vagrant up, I got an error that basically said that the vagrant file wasn't compatible with the older version of the software. I fixed this by adding the hashicorp repository to my repository list and installing it directly from the developers.
 ## 1.1 Set up the lab environment
 I did this by creating a new folder and copying the files found in the origininal repository.
