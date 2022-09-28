@@ -1,7 +1,7 @@
 # Lab Report: Continuous Integration/Delivery With Jenkins
-## Problems:
+## Problems encountered
 ### Installing vagrant
-With installing all the required software. I found out that the Fedora repositories don't include the latest version of vagrant. This was something I had to noticed since when I did vagrant up, I got an error that basically said that the vagrant file wasn't compatible with the older version of the software. I fixed this by adding the hashicorp repository to my repository list and installing it directly from the developers.
+With the installation of vagrant. I found out that the Fedora repositories don't include the latest version of vagrant. This was something I had to noticed since when I did vagrant up, I got an error that basically said that the vagrant file wasn't compatible with the older version of the software. I fixed this by adding the hashicorp repository to my repository list and installing it directly from the developers.
 ## 1.1 Set up the lab environment
 I did this by creating a new folder and copying the files found in the origininal repository.
 
@@ -48,6 +48,18 @@ I got the build to run succesfully. After building it for the first time and ate
 
 ## 1.6 Add a job to the test application
 First I tried to find the ip adresses of the containers. I found those with the **docker inspect** command. The ipaddress of the jenkins server was 172.17.0.2 and the sampleapp's ip address was 172.17.0.3 .
+
+```
+vagrant@dockerlab:/vagrant/cicd-sample-app$ docker inspect jenkins_server | grep -i "ipaddress"
+            "SecondaryIPAddresses": null,
+            "IPAddress": "172.17.0.2",
+                    "IPAddress": "172.17.0.2",
+vagrant@dockerlab:/vagrant/cicd-sample-app$ docker inspect samplerunning | grep -i "ipaddress"
+            "SecondaryIPAddresses": null,
+            "IPAddress": "172.17.0.3",
+                    "IPAddress": "172.17.0.3",
+```
+
 
 After that I followed the steps provided and executed the text successfully.
 
