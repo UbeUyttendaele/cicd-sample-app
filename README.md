@@ -43,6 +43,25 @@ I got the build to run succesfully. After building it for the first time and ate
 
 ![buildSuccess](./reportScreenshots/buildSuccess.png)
 
+
+
+
+## 1.6 Add a job to the test application
+First I tried to find the ip adresses of the containers. I found those with the **docker inspect** command. The ipaddress of the jenkins server was 172.17.0.2 and the sampleapp's ip address was 172.17.0.3 .
+
+After that I followed the steps provided and executed the text successfully.
+
+![testSucces](./reportScreenshots/testSuccess.png)
+
+Then I tried the test after removing the samplerunning container. To which it returned an error that marked that the container could not be found.
+![testFail](./reportScreenshots/testFail.png)
+
+## 1.7 Create a build pipeline
+After following the steps and filling in the correct names for my jobs. The pipeline got succesfully completed.
+![pipelineSuccess](./reportScreenshots/pipelineSuccess.png)
+
+## Make a change in the application
+
 ## Resources
 
 List all sources of useful information that you encountered while completing this assignment: books, manuals, HOWTO's, blog posts, etc.
