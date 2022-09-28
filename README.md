@@ -60,8 +60,13 @@ Then I tried the test after removing the samplerunning container. To which it re
 After following the steps and filling in the correct names for my jobs. The pipeline got succesfully completed.
 ![pipelineSuccess](./reportScreenshots/pipelineSuccess.png)
 
-## Make a change in the application
+## 1.8 Make a change in the application
+As the final step I've change the background color in the style.css to pink. After wich I ran the pipeline which ran successfully. To check if it worked I visited the sampleapp on my host machine, the background got changed to my requested color which was pink.
 
+![pipelineSuccess2](./reportScreenshots/pipelineSuccess2.png)
+
+![backgroundCheck](./reportScreenshots/backgroundCheck.png)
 ## Resources
 
-List all sources of useful information that you encountered while completing this assignment: books, manuals, HOWTO's, blog posts, etc.
+* Docker container ip address: https://stackoverflow.com/questions/17157721/how-to-get-a-docker-containers-ip-address-from-the-host
+* Docker documentation: https://docs.docker.com/ (to find commands like docker container prune or docker container rm [container name/id])
